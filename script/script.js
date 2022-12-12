@@ -1,5 +1,3 @@
-/* for create this js i took inspiration on https://www.youtube.com/watch?v=BN6fH1nRDxA */
-
 /* Menu button when user use small screen */
 
 const menubutton = document.querySelector('#menu-button'); /* select the id menu-button and store it, into the constant menubutton */
