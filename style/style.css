@@ -1,0 +1,262 @@
+/* Below I use google fonts for my writing - https://fonts.google.com/specimen/Poppins?query=poppins - i took 
+Thin 100
+ExtraLight 200
+Light 300
+Regular 400
+Medium 500
+SemiBold 600
+
+To work I copy and paste (line 30): 
+
+font-family: 'Poppins', sans-serif;
+*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+*{ /* the star permit to target all elements of html */
+    font-family: 'Poppins', sans-serif; /* permit to use Google Fonts (above) that I have personalised as font family */
+    margin: 0; 
+	padding: 0;
+    box-sizing: border-box; /* https://www.w3schools.com/css/css3_box-sizing.asp#:~:text=With%20the%20CSS%20box%2Dsizing,are%20the%20same%20size%20now! this permit to include the padding and border in the width and height which make the design easier to manipulate */
+    border: none; /* i remove the border by default */
+    text-decoration: none; /* i remove the decoration by default (it was underline) */
+    outline: none; /* remove the outline */
+}
+html{
+    font-size: 65%;
+    overflow-x: hidden; /* https://www.w3schools.com/cssref/css3_pr_overflow-x.php permit to clipped the content when it overflows at the left and right edges (x for righ/left and y for top/bottom */
+}
+
+section { /* select all section in html */
+    padding: 80px 10%; /* top and bottom paddings are 80px right and left paddings are 10% https://www.w3schools.com/css/css_padding.asp permit to organise the section on the page*/
+}
+/* button on the carousel "Book a flight" */
+.button {
+    display: inline-block;
+    font-size: 15px; 
+    padding: 1rem 3rem; /* top and bottom paddings are 1rem (1rem = 16px) right and left paddings are 3rem */
+    background: purple;
+    color: white;
+    cursor: pointer;
+}
+.button:hover{ /* when cursor hover the button "Book a flight" of the carousel the color of button will change in black https://www.w3schools.com/cssref/sel_hover.php */
+    background: black;
+}
+
+/* Formatting of the header */
+.header{
+    position: sticky; /* permit to stick the header when the user scrool down on the page */
+    top: 0; 
+	left: 0; 
+	right: 0;/* permit at the header to take all the top of the page */
+    z-index: 1000 !important; /* when user scroll down, the page will go below the header ex : z-index: 1000 would appear on top of a z-index 999 https://www.w3schools.com/css/css_z-index.asp */
+    background: white;
+     display: flex; /* permit to align all elements in the header https://www.w3schools.com/css/css3_flexbox.asp so technically a flexible element fills the available space of its container */
+     justify-content: space-between; /* permit to put a space between the header and the navbar */ 
+     align-items: center; /* align elements vertically */
+     padding-top: 2rem; 
+     padding-bottom: 2rem; /* rem => https://www.w3schools.com/cssref/css_units.php rem permit to multiply the size by default of the padding */
+     box-shadow:0 0.5rem 1rem grey; /* permit to add a shadow at the bottom of the header = box-shadow:offset-x(0) offset-y(0.5rem)  blur-radius(1rem) color https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow */
+}
+.header .logo { /* for the logo "Travel" */
+    font-size: 3rem;
+    color: black;
+
+}
+
+.header .navbar a{ /* select <a> in html (hyperlink) to design logo home about services reservation */
+    font-size: 2rem;
+    margin-left: 2rem; /* permit to put a space between home about services reservation */
+    color: black;
+}
+.header .navbar a:hover { /* when cursor hover home about services reservation the color of element will change in purple https://www.w3schools.com/cssref/sel_hover.php */
+    color: purple;
+}
+#menu-button{ /* for design the button of hamburger menu */
+    font-size: 3rem; /* 1rem=16px */
+    cursor: pointer; /* modify the cursor when hover */
+    display: none; /* the menu button will only appear on a mobile phone/smaller screen (see below @media) */
+}
+
+.home{ /* select class home in html */
+    padding: 0;
+}
+.home .slide { /* select class slide inside class home in html */
+    text-align: center;
+    padding: 2rem;
+    display: flex; 
+    justify-content: center; /* permit to aligns the flex items at the center of the container (horizontally) https://www.w3schools.com/cssref/css3_pr_justify-content.php */ 
+    align-items: center; /* permit to aligns the flex items at the center of the container (vertically) https://www.w3schools.com/cssref/css3_pr_align-items.php */
+    background-size: cover !important;
+    background-position: center !important; /* resize the background image to cover the entire container, even if it has to stretch the image or cut a little bit off one of the edges. https://www.w3schools.com/cssref/css3_pr_background-size.php also    https://developer.mozilla.org/en-US/docs/Web/CSS/background-size#:~:text=Si%20background-size%20vaut%20contain,de%20l'arri%C3%A8re-plan. */
+    min-height: 60rem;
+}
+.home .slide .content{ /* select class content inside class slide, itself inside class home in html */
+    width: 85rem;
+    
+}
+.home .slide .content span{ /* select span inside class content, itself inside class slide itself inside class home in html */
+    display: block;
+    font-size: 3rem;
+    color: white;
+    padding-bottom: 1rem;
+   /*  animation: fade .3s linear backwards .2s; */
+}
+.home .slide .content h3{ /* select h3 inside class content, itself inside class slide itself inside class home in html */
+    font-size: 60px;
+    color: white;
+    text-transform: uppercase;
+    padding: 16px 0;
+}
+
+/* Arrows left and right of carousel */
+.swiper-button-next:hover,
+.swiper-button-prev:hover{ /* select (arrows of carousel) class swiper-button-next and swiper-button-prev in html; also when cursor hover this two classes the background will change in purple and the color in white https://www.w3schools.com/cssref/sel_hover.php */
+   background: purple;
+   color: white;
+}
+
+/* SERVICES PAGE */
+.heading-title {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 60px;
+    color: black;
+}
+.services .box-container{ /* select class box-container, inside class services = all boxes are selected */
+    display: grid; /* https://www.w3schools.com/css/css_grid.asp */
+    gap: 16px;
+}
+.services .box-container .box { /* select class box, inside class box-container, inside class services = each boxes are selected */
+    text-align: center;
+    background: purple;
+    padding: 50px 30px; /* top and bottom paddings are 50px, right and left paddings are 30px https://www.w3schools.com/css/css_padding.asp */
+    cursor: pointer;
+}
+.services .box-container .box:hover{
+    background: black;
+}
+.services .box-container .box h3{
+    font-size: 15px;
+    color: white;
+    padding-top: 15px;
+}
+/* END OF SERVICES PAGE */
+
+/* ABOUT PAGE */
+.home-about{
+    display: flex;
+    align-items: center; /* permit to aligns the flex items at the center of the container (vertically) https://www.w3schools.com/cssref/css3_pr_align-items.php */
+    flex-wrap: wrap;  /* Specifies that the flexible items will wrap if necessary https://www.w3schools.com/cssref/css3_pr_flex-wrap.php */
+}
+.home-about .image{ /* select the (image) class image inside the class home-about */
+	flex: 1 1 650px; /* flex-grow=1 | flex-shrink=1 | flex-basis=650px  https://developer.mozilla.org/en-US/docs/Web/CSS/flex like this the image will share the same space with the content*/
+}
+.home-about .image img{ /* select the image in about page for extend it to fit in the about page */
+    width: 100%; /* image optimisation possible */
+}
+.home-about .content{
+    flex:  1 1 650px; /* flex-grow=1 | flex-shrink=1 | flex-basis=650px  https://developer.mozilla.org/en-US/docs/Web/CSS/flex like this the content will share the same space with the image*/
+    padding: 30px;
+}
+.home-about .content h3{
+    font-size: 30px;
+    color: black;
+}
+.home-about .content p{ /* select the paragraph of about page */
+    font-size: 15px;
+    padding: 15px 0; /* top and bottom paddings are 15px, right and left paddings are 0 https://www.w3schools.com/css/css_padding.asp */
+    line-height: 2;
+    color: black;
+}
+/* END OF ABOUT PAGE */
+
+/* BOOK PAGE */
+.home-offer{
+    text-align: center;
+
+}
+.home-offer .content{
+    max-width: 70rem;
+    margin: 0 auto;
+}
+.home-offer .content h3{
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    color: black;
+}
+.home-offer .content p{
+    font-size: 1.5rem;
+    color: var(--light-black);
+    line-height: 2;
+    padding: 1rem 0;
+}
+/* END OF BOOK PAGE */
+
+/* FOOTER OF PAGES */
+.footer{
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+}
+.footer .box-container{
+    display: grid;
+    gap: 10px;
+}
+.footer .box-container .box h3{
+    color: black;
+    font-size: 20px;
+    display: block;
+}
+.footer .box-container .box a{
+    color: black;
+    font-size: 15px;
+    display: block;
+}
+.footer .box-container .box a i{
+    color: purple;
+}
+.footer .box-container .box a:hover i{
+    padding-right: 20px;
+} 
+.footer .home-right{
+    text-align: center;
+	font-size: 12px; 
+	padding-top: 20px;	
+}
+/* END OF FOOTER */
+
+/* Responsive design */
+@media (max-width:1200px){ /* modify display on smaller screen/tab */
+    html{
+        font-size: 55%;
+    }
+	section{
+        padding: 3rem 5%; /* top and bottom paddings are 3rem (1rem = 16px) right and left paddings are 5% https://www.w3schools.com/css/css_padding.asp permit to organise the section on the page */
+    }
+}
+@media (max-width: 768px){ /* modify display for smaller screen - width of tablets/smartphones around 768px  */
+    #menu-button{
+        display: inline-block;/* brings up the hamburger menu icon when the screen is below 768px https://www.w3schools.com/cssref/pr_class_display.php inline-block=Displays an element as an inline-level block container. */
+    }
+
+
+    .header .navbar { 
+        position: absolute; /* absolute avoid to the navbar to moove along with page scrolling https://www.w3schools.com/css/css_positioning.asp*/
+        top: 50px; /* placed 50px from the top edge https://www.w3schools.com/cssref/pr_pos_top.php */
+		left: 0; 
+		right: 0; /* to take the whole width  */
+		background: white;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0); /* this is from https://bennettfeely.com/clippy/ = allows the menu to disappear - we will display it when user click on menu */
+
+    } 
+
+    .header .navbar.active{ /* active class exist only on CSS; we use script.js to call the class active and make it run; to display the hamburger menu when the user click on the menu button */
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);/* this is from https://bennettfeely.com/clippy/ = when you display the element completely  */
+    }
+
+    .header .navbar a{
+        display: block; /* permit to put one below the other (home, about etc) https://www.w3schools.com/cssref/pr_class_display.php */
+        text-align: center;
+        margin: 2rem;
+    }
+}

@@ -1,0 +1,85 @@
+ <!DOCTYPE html>
+<html lang="eng"> <!-- language of the page -->
+<head>
+    <meta charset="UTF-8"> <!-- indicate the charset for optimise the speed of the page display -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- permit to adapt the display at the device -->
+   
+	<title>Services</title>
+	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"> <!-- Load an icon library to show a hamburger menu (bars) on small screens https://www.w3schools.com/howto/howto_js_mobile_navbar.asp --> 
+    
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.css"> <!-- from https://cdnjs.com/libraries/Swiper -->
+	
+    <link rel="stylesheet" href="../style/style.css">
+</head>
+<body>
+    <!-- Header section -->
+    <section class="header">
+        <a href="../index.html" class="logo">Travel</a> <!-- the logo is travel for now href to nothing --> 
+		
+		<!-- we create a navigation bar in the header https://www.w3schools.com/tags/tag_nav.asp -->
+        <nav class="navbar"> 
+            <a href="../index.html">Home</a> <!-- no logo for now href to nothing, -->
+            <a href="services.html">Services</a> <!-- no logo for now href to nothing "services/services.html" --><!-- <a>tag to link page -->
+            <a href="../book/book.html">Book</a> <!-- no logo for now href to nothing "contact/contact.html"--><!-- <a>tag to link page -->
+			<a href="../about/about.html">About us</a> <!-- no logo for now href to nothing  faudra ajouter link "../about/about.html"  --><!-- <a>tag to link page -->
+        </nav>
+        <div class="fa fa-bars" id="menu-button"></div> <!-- we use font awesome class from the link above "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" source=https://www.w3schools.com/howto/howto_js_mobile_navbar.asp allows you to have a hamburger menu with three small dashes when you are on a mobile type display -->
+    </section>
+ 
+ <!-- Section - services -->
+    <section class="services">
+        <h1 class="heading-title">OUR SERVICES</h1>
+        <div class="box-container">
+            <div class="box">
+                <img src="../images/icon-1.png" alt="">
+                <h3>Adventure</h3>
+            </div>
+            <div class="box">
+                <img src="../images/icon-2.png" alt="">
+                <h3>Tour guide</h3>
+            </div>
+            <div class="box">
+                <img src="../images/icon-3.png" alt="">
+                <h3>Hiking</h3>
+            </div>
+            <div class="box">
+                <img src="../images/icon-4.png" alt="">
+                <h3>Off-road</h3>
+            </div>
+            <div class="box">
+                <img src="../images/icon-5.png" alt="">
+                <h3>Events</h3>
+            </div>
+            <div class="box">
+                <img src="../images/icon-6.png" alt="">
+                <h3>All in one</h3>
+            </div>
+        </div>
+    </section>
+	
+	<!-- Footer section -->
+	<!-- we use font awesome class from the link above "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" to use icons phone, envelope, facebook, twitter, and instagram -->
+    <section class="footer">
+        <div class="box-container">
+            <div class="box">
+                <h3>CONTACT US</h3>
+                <a href="#"><i class="fas fa-phone"></i>+353 60934817</a>
+                <a href="#"><i class="fas fa-envelope"></i>TravelWithMarinaAgency@gmail.com </a>
+            </div>
+            <div class="box">
+                <h3>FOLLOW US</h3>
+                <a href="#"><i class="fab fa-facebook"></i>Facebook </a>
+                <a href="#"><i class="fab fa-twitter"></i>Twitter </a>
+                <a href="#"><i class="fab fa-instagram"></i>Instagram </a>
+            </div>
+        </div>
+        <div class="home-right">
+             © 2022 TravelWithMarinaAgency | All Rights Reserved
+        </div>
+    </section>
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js"></script> <!-- from https://cdnjs.com/libraries/Swiper -->
+    <script src="../script/script.js"></script>
+</body>
+</html>

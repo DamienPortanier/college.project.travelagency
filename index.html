@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="eng"> <!-- language of the page -->
+<head>
+    <meta charset="UTF-8"> <!-- indicate the charset for optimise the speed of the page display -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- permit to adapt the display at the device -->
+   
+	<title>Travel with Marina</title>
+	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"> <!-- from https://cdnjs.com/libraries/font-awesome Load an icon library to show a hamburger menu (bars) on small screens https://www.w3schools.com/howto/howto_js_mobile_navbar.asp --> 
+    
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.css"> <!-- from https://cdnjs.com/libraries/Swiper -->
+	
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <!-- Header section -->
+    <section class="header">
+        <a href="index.html" class="logo">Travel</a> <!-- the logo is travel for now href to nothing --> 
+		
+		<!-- we create a navigation bar in the header https://www.w3schools.com/tags/tag_nav.asp -->
+        <nav class="navbar"> 
+            <a href="index.html">Home</a> 
+            <a href="services/services.html">Services</a> 
+            <a href="book/book.html">Book</a> 
+			<a href="about/about.html">About us</a> 
+        </nav>
+        <div class="fa fa-bars" id="menu-button"></div> <!-- we use font awesome class from the link above "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" source=https://www.w3schools.com/howto/howto_js_mobile_navbar.asp allows you to have a hamburger menu with three small dashes when you are on a mobile type display -->
+    </section>
+
+    <!-- Carousel section + Swiper --> <!-- image from https://www.pexels.com/ --> <!-- for create the swiper js my source is https://swiperjs.com/get-started#add-swiper-html-layout -->
+    <section class="home">
+        <div class="home-slider swiper">
+            <div class="swiper-wrapper">
+                <div class="slide swiper-slide" style="background: url(images/dubai.jpg);">
+                    <div class="content">
+                        <span>Explore, discover, travel in DUBAI</span>
+                        <h3>travel around the world</h3>
+                        <a href="book/book.html" class="button">Book a flight</a> <!-- ajouter le link vers reservation -->
+                    </div>
+                </div>
+                <div class="slide swiper-slide" style="background: url(images/paris.jpg);">
+                    <div class="content">
+                        <span>Explore, discover, travel in PARIS</span>
+                        <h3>discover new places</h3>
+                        <a href="book/book.html" class="button">Book a flight</a>
+						<!-- ajouter le link vers reservation -->
+                    </div>
+                </div>
+                <div class="slide swiper-slide" style="background: url(images/tokyo.jpg);">
+                    <div class="content" >
+                        <span>Explore, discover, travel in TOKYO</span>
+                        <h3>make your visit interesting</h3>
+                        <a href="book/book.html" class="button">Book a flight</a>
+						<!-- ajouter le link vers reservation -->
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </section>
+
+    <!-- Footer section -->
+	<!-- we use font awesome class from the link above "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" to use icons phone, envelope, facebook, twitter, and instagram -->
+    <section class="footer">
+        <div class="box-container">
+            <div class="box">
+                <h3>CONTACT US</h3>
+                <a href="#"><i class="fas fa-phone"></i>+353 60934817</a>
+                <a href="#"><i class="fas fa-envelope"></i>TravelWithMarinaAgency@gmail.com </a>
+            </div>
+            <div class="box">
+                <h3>FOLLOW US</h3>
+                <a href="#"><i class="fab fa-facebook"></i>Facebook </a>
+                <a href="#"><i class="fab fa-twitter"></i>Twitter </a>
+                <a href="#"><i class="fab fa-instagram"></i>Instagram </a>
+            </div>
+        </div>
+        <div class="home-right">
+             © 2022 TravelWithMarinaAgency | All Rights Reserved
+        </div>
+    </section>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js"></script> <!-- from https://cdnjs.com/libraries/Swiper -->
+    <script src="script/script.js"></script>
+</body>
+</html>
