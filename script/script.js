@@ -1,4 +1,4 @@
-/* Menu button when user use small screen */
+/* Menu button when user use SMALL SCREEN */
 
 const menubutton = document.querySelector('#menu-button'); /* select the id menu-button and store it, into the constant menubutton */
 const navbar = document.querySelector('.header .navbar'); /* select the two class header navbar and store it, into the constant navbar */
@@ -9,12 +9,12 @@ menubutton.addEventListener('click',()=>{
 
 })
 
-/* Swiper the carousel - for create the swiper js my source is https://swiperjs.com/get-started#initialize-swiper */ 
+/* SWIPER the CAROUSEL - for create the swiper js my source is https://swiperjs.com/get-started#initialize-swiper */ 
 
  const swiper = new Swiper('.home-slider', {
     loop: true, //this permit to slide images of carousel indefinitely 
   
-    // Navigation arrows
+    // Navigation ARROWS
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',

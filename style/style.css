@@ -6,10 +6,11 @@ Regular 400
 Medium 500
 SemiBold 600
 
-To work I copy and paste (line 30): 
+To work I copy and paste (line 16): 
 
 font-family: 'Poppins', sans-serif;
 */
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
 
 *{ /* the star permit to target all elements of html */
@@ -25,15 +26,15 @@ html{
     font-size: 65%;
     overflow-x: hidden; /* https://www.w3schools.com/cssref/css3_pr_overflow-x.php permit to clipped the content when it overflows at the left and right edges (x for righ/left and y for top/bottom */
 }
-
 section { /* select all section in html */
     padding: 80px 10%; /* top and bottom paddings are 80px right and left paddings are 10% https://www.w3schools.com/css/css_padding.asp permit to organise the section on the page*/
 }
-/* button on the carousel "Book a flight" */
+
+/* button on the CAROUSEL "Book a flight", on the BOOK PAGE "Book now", on the ABOUT PAGE "Book a trip" */
 .button {
     display: inline-block;
     font-size: 15px; 
-    padding: 1rem 3rem; /* top and bottom paddings are 1rem (1rem = 16px) right and left paddings are 3rem */
+    padding: 1rem 3rem; /* top and bottom paddings are 1rem (1rem = around 16px) right and left paddings are 3rem */
     background: purple;
     color: white;
     cursor: pointer;
@@ -42,7 +43,7 @@ section { /* select all section in html */
     background: black;
 }
 
-/* Formatting of the header */
+/* Formatting of the HEADER */
 .header{
     position: sticky; /* permit to stick the header when the user scrool down on the page */
     top: 0; 
@@ -62,21 +63,19 @@ section { /* select all section in html */
     color: black;
 
 }
-
-.header .navbar a{ /* select <a> in html (hyperlink) to design logo home about services reservation */
+.header .navbar a{ /* select <a> in html (hyperlink) to design logo home about services book */
     font-size: 2rem;
-    margin-left: 2rem; /* permit to put a space between home about services reservation */
+    margin-left: 2rem; /* permit to put a space between home about services book */
     color: black;
 }
-.header .navbar a:hover { /* when cursor hover home about services reservation the color of element will change in purple https://www.w3schools.com/cssref/sel_hover.php */
+.header .navbar a:hover { /* when cursor hover home about services book the color of element will change in purple https://www.w3schools.com/cssref/sel_hover.php */
     color: purple;
 }
-#menu-button{ /* for design the button of hamburger menu */
+#menu-button{ /* for design the button of HAMBURGER MENU when screen is smaller */
     font-size: 3rem; /* 1rem=16px */
-    cursor: pointer; /* modify the cursor when hover */
+    cursor: pointer; /* modify the cursor when hover the menu-button */
     display: none; /* the menu button will only appear on a mobile phone/smaller screen (see below @media) */
 }
-
 .home{ /* select class home in html */
     padding: 0;
 }
@@ -91,24 +90,22 @@ section { /* select all section in html */
     min-height: 60rem;
 }
 .home .slide .content{ /* select class content inside class slide, itself inside class home in html */
-    width: 85rem;
-    
+    width: 85rem;  
 }
 .home .slide .content span{ /* select span inside class content, itself inside class slide itself inside class home in html */
     display: block;
     font-size: 3rem;
     color: white;
     padding-bottom: 1rem;
-   /*  animation: fade .3s linear backwards .2s; */
 }
-.home .slide .content h3{ /* select h3 inside class content, itself inside class slide itself inside class home in html */
+.home .slide .content h3{ /* select h3 inside class content, itself inside class slide, itself inside class home in html */
     font-size: 60px;
     color: white;
     text-transform: uppercase;
     padding: 16px 0;
 }
 
-/* Arrows left and right of carousel */
+/* ARROWS left and right of CAROUSEL */
 .swiper-button-next:hover,
 .swiper-button-prev:hover{ /* select (arrows of carousel) class swiper-button-next and swiper-button-prev in html; also when cursor hover this two classes the background will change in purple and the color in white https://www.w3schools.com/cssref/sel_hover.php */
    background: purple;
@@ -225,7 +222,7 @@ section { /* select all section in html */
 }
 /* END OF FOOTER */
 
-/* Responsive design */
+/* RESPONSIVE DESIGN */
 @media (max-width:1200px){ /* modify display on smaller screen/tab */
     html{
         font-size: 55%;
@@ -235,10 +232,10 @@ section { /* select all section in html */
     }
 }
 @media (max-width: 768px){ /* modify display for smaller screen - width of tablets/smartphones around 768px  */
+
     #menu-button{
         display: inline-block;/* brings up the hamburger menu icon when the screen is below 768px https://www.w3schools.com/cssref/pr_class_display.php inline-block=Displays an element as an inline-level block container. */
     }
-
 
     .header .navbar { 
         position: absolute; /* absolute avoid to the navbar to moove along with page scrolling https://www.w3schools.com/css/css_positioning.asp*/
@@ -247,7 +244,6 @@ section { /* select all section in html */
 		right: 0; /* to take the whole width  */
 		background: white;
         clip-path: polygon(0 0, 100% 0, 100% 0, 0 0); /* this is from https://bennettfeely.com/clippy/ = allows the menu to disappear - we will display it when user click on menu */
-
     } 
 
     .header .navbar.active{ /* active class exist only on CSS; we use script.js to call the class active and make it run; to display the hamburger menu when the user click on the menu button */
